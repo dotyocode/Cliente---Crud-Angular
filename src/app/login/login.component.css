@@ -1,0 +1,39 @@
+.loginCard{
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30%;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.titulo{
+  text-align: center;
+}
+
+
+.subtitulo{
+  text-align: center;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.registrar{
+left: auto;
+right: auto;
+margin-top: 2%
+}

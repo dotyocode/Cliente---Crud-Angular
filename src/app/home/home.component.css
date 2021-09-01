@@ -1,0 +1,49 @@
+.tabela {
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tituloTabela {
+  text-align: center;
+}
+
+.paragrafo {
+  text-align: center;
+}
+
+.botao {
+  margin-top: 1%;
+}
+
+.titulo {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mensagem {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  animation: fadeIn 0.3s;
+}
+
+.loading {
+  margin-top: 20%;
+}
+
+.paragrafoL {
+  text-align: center;
+  margin-top: 20%;
+}

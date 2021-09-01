@@ -1,0 +1,45 @@
+<p *ngIf="!nome" class="paragrafoL" style="width: 20%; margin-left: 40%">
+  Carregando Dados
+</p>
+<mat-progress-bar *ngIf="!nome" mode="indeterminate" value="40" style="width: 20%; margin-left: 40%"></mat-progress-bar>
+
+<div *ngIf="!nome && nome.length > 0" class="w-25 p-3 mensagem">
+  <h1 class="titulo">Ops!</h1>
+  <p class="alert alert-secondary paragrafo" role="alert">
+    Não há usuarios, clique no botão abaixo e faça um novo cadastro
+    <br />
+    <button routerLink="/cadastro" class="btn btn-warning botao" color="primary">
+      Cadastrar novo Usuario
+    </button>
+  </p>
+</div>
+<div *ngIf="nome && nome.length" class="tabela w-50 p-3">
+  <h1 class="tituloTabela">Tabela de Usuarios</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let n of nome, let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{ n.nome }}</td>
+        <td>{{ n.idade }}</td>
+        <td>{{ n.email }}</td>
+        <td>
+          <button routerLink="/editar/{{ n._id }}" mat-button color="primary">
+            Editar
+          </button>
+          <button (click)="deletarCadastro(n)" mat-button color="warn">
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

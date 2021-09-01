@@ -1,0 +1,22 @@
+<mat-card class="loginCard">
+  <mat-card-title class="titulo">Login</mat-card-title>
+  <mat-card-subtitle class="subtitulo">Faça seu Login para poder continuar</mat-card-subtitle>
+
+  <form>
+    <mat-form-field>
+      <mat-label>Email:</mat-label>
+      <input type="text" [(ngModel)]="usuario.email" matInput id="email" required name="email" minlength="3" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Senha:</mat-label>
+      <input type="password" [(ngModel)]="usuario.senha" matInput id="senha" required minlength="5" name="senha" />
+    </mat-form-field>
+
+    <button (click)="fazendoLogin()" class="btn btn-dark">
+      Fazer Login
+    </button>
+  </form>
+
+  <!-- <a mat-button color="primary" class="registrar">Registrar</a> -->
+
+</mat-card>

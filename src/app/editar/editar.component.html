@@ -1,0 +1,27 @@
+<p *ngIf="!cadastro" class="paragrafoL" style="width: 20%; margin-left: 40%">
+  Carregando Dados
+</p>
+<mat-progress-bar *ngIf="!cadastro" mode="indeterminate" value="40" style="width: 20%; margin-left: 40%">
+</mat-progress-bar>
+
+<div *ngIf="cadastro" class="formulario w-25 p-3">
+  <h3 style="text-align: center">Editar Usuario</h3>
+  <form>
+    <mat-form-field>
+      <mat-label>Nome:</mat-label>
+      <input matInput id="nome" [(ngModel)]="cadastro.nome" required name="nome" minlength="3" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Idade:</mat-label>
+      <input matInput id="idade" [(ngModel)]="cadastro.idade" required maxlength="3" name="idade" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email:</mat-label>
+      <input matInput id="email" [(ngModel)]="cadastro.email" required maxlength="50" name="email" />
+    </mat-form-field>
+
+    <button (click)="update(cadastro)" class="btn btn-dark">
+      Editar Cadastro
+    </button>
+  </form>
+</div>

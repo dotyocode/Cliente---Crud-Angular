@@ -1,0 +1,25 @@
+<div class="formulario w-25 p-3">
+  <h1 style="text-align: center">Cadastro de novo usuario</h1>
+  <form [formGroup]="liveForm" #formCadastro="ngForm" class="needs-validation" novalidate>
+    <mat-form-field>
+      <mat-label>Nome:</mat-label>
+      <input matInput id="nome" formControlName="nome" required minlength="3" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Idade:</mat-label>
+      <input matInput id="idade" formControlName="idade" required maxlength="3" />
+    </mat-form-field>
+    <mat-form-field id="formEmail">
+      <mat-label id="labelEmail">Email:</mat-label>
+      <input matInput id="email" formControlName="email" required maxlength="50" type="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Senha:</mat-label>
+      <input matInput id="senha" formControlName="senha" required type="password" maxlength="50" />
+    </mat-form-field>
+
+    <button (click)="cadastrar()" style="margin-top: 10px" class="btn btn-dark">
+      Enviar
+    </button>
+  </form>
+</div>
