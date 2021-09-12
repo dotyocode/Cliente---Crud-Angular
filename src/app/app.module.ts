@@ -20,6 +20,9 @@ import { LoginComponent } from './login/login.component';
 import {MatCardModule} from '@angular/material/card';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth-guard.guard';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -43,7 +46,8 @@ import { AuthGuard } from './guards/auth-guard.guard';
     MatInputModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],

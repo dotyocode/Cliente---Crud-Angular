@@ -63,6 +63,8 @@ export class CadastroApiService {
     return this.http.post(`${this.API_URL}registrar`, cliente, httpOptions);
   }
 
+
+
   delCliente(id: any): Observable<any> {
 
     let headers = new HttpHeaders({
@@ -104,6 +106,10 @@ export class CadastroApiService {
   // login
   getLogin(usuario: any) {
     return this.http.post<any>(`${this.API_URL}login`, usuario);
+  }
+
+  addLogin(login: any) {
+    return this.http.post(`${this.API_URL}login/registrar`, login)
   }
 
 }

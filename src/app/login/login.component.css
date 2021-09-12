@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.tituloCadastro {
+  text-align: center;
+}
+
 
 .subtitulo{
   text-align: center;
@@ -36,4 +40,38 @@ form {
 left: auto;
 right: auto;
 margin-top: 2%
+}
+
+
+.cadastro{
+  text-align: center;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin-top: 4%;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+}
+
+.cadastro:hover{
+  font-size: 13px;
+  color: rgb(255, 0, 98);
+}
+
+
+#forms {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+#forms:hide {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.voltar{
+  cursor: pointer;
+}
+
+.voltar:hover{
+  color: rgb(255, 0, 98);
 }

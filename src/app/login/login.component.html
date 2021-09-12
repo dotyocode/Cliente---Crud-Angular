@@ -1,4 +1,4 @@
-<mat-card class="loginCard">
+<mat-card class="loginCard" id="forms" *ngIf="transicao">
   <mat-card-title class="titulo">Login</mat-card-title>
   <mat-card-subtitle class="subtitulo">Faça seu Login para poder continuar</mat-card-subtitle>
 
@@ -15,8 +15,44 @@
     <button (click)="fazendoLogin()" class="btn btn-dark">
       Fazer Login
     </button>
+    <a (click)="cadastrarUsuario()" class="cadastro">Cadastrar</a>
   </form>
 
   <!-- <a mat-button color="primary" class="registrar">Registrar</a> -->
 
 </mat-card>
+
+
+<mat-card class="loginCard" *ngIf="!transicao">
+
+  <mat-icon (click)="voltar()" class="voltar">keyboard_backspace</mat-icon>
+
+  <div class="formulario ">
+    <h1 style="text-align: center" class="tituloCadastro">Cadastro de novo Login</h1>
+    <form [formGroup]="liveForm" #formCadastro="ngForm" class="needs-validation" novalidate>
+      <mat-form-field>
+        <mat-label>Nome:</mat-label>
+        <input matInput id="nome" formControlName="nome" required minlength="3" />
+      </mat-form-field>
+
+      <mat-form-field id="formEmail">
+        <mat-label id="labelEmail">Email:</mat-label>
+        <input matInput id="email" formControlName="email" required maxlength="50" type="email" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Senha:</mat-label>
+        <input matInput id="senha" formControlName="senha" required type="password" maxlength="50" />
+      </mat-form-field>
+
+      <button (click)="cadastroLogin()" style="margin-top: 10px" class="btn btn-dark">
+        Cadastrar
+      </button>
+    </form>
+  </div>
+
+
+</mat-card>
+
+
+
